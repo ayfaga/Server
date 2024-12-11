@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ассортимент товаров</title>
+	<style>
+		table {
+			width: 100%;
+			border-collapse: collapse;
+		}
+
+		th,
+		td {
+			border: 1px solid black;
+			padding: 8px;
+			text-align: center;
+		}
+
+		.counter-container {
+			display: flex;
+			align-items: center;
+		}
+
+		.counter-button {
+			width: 30px;
+			height: 30px;
+			text-align: center;
+			line-height: 30px;
+			border: 1px solid #000;
+			cursor: pointer;
+		}
+
+		.counter-label {
+			margin: 0 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th>Товар</th>
+				<th>Цена (руб.)</th>
+				<th>Количество</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Значки</td>
+				<td>40</td>
+				<td>
+					<div class="counter-container">
+						<div class="counter-button" onclick="decrementCounter('counter1')">-</div>
+						<div class="counter-label" id="counter1">Добавлено: 0</div>
+						<div class="counter-button" onclick="incrementCounter('counter1')">+</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>Подстаканники</td>
+				<td>2000</td>
+				<td>
+					<div class="counter-container">
+						<div class="counter-button" onclick="decrementCounter('counter2')">-</div>
+						<div class="counter-label" id="counter2">Добавлено: 0</div>
+						<div class="counter-button" onclick="incrementCounter('counter2')">+</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>Конфеты</td>
+				<td>80</td>
+				<td>
+					<div class="counter-container">
+						<div class="counter-button" onclick="decrementCounter('counter3')">-</div>
+						<div class="counter-label" id="counter3">Добавлено: 0</div>
+						<div class="counter-button" onclick="incrementCounter('counter3')">+</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>Пастила</td>
+				<td>75</td>
+				<td>
+					<div class="counter-container">
+						<div class="counter-button" onclick="decrementCounter('counter4')">-</div>
+						<div class="counter-label" id="counter4">Добавлено: 0</div>
+						<div class="counter-button" onclick="incrementCounter('counter4')">+</div>
+					</div>
+				</td>
+			</tr>
+
+			<tr>
+				<td>Козинак</td>
+				<td>38</td>
+				<td>
+					<div class="counter-container">
+						<div class="counter-button" onclick="decrementCounter('counter5')">-</div>
+						<div class="counter-label" id="counter5">Добавлено: 0</div>
+						<div class="counter-button" onclick="incrementCounter('counter5')">+</div>
+					</div>
+				</td>
+			</tr>
+
+			<tr>
+				<td>Кофе</td>
+				<td>91</td>
+				<td>
+					<div class="counter-container">
+						<div class="counter-button" onclick="decrementCounter('counter6')">-</div>
+						<div class="counter-label" id="counter6">Добавлено: 0</div>
+						<div class="counter-button" onclick="incrementCounter('counter6')">+</div>
+					</div>
+				</td>
+			</tr>
+
+			<tr>
+				<td>Сахар</td>
+				<td>10</td>
+				<td>
+					<div class="counter-container">
+						<div class="counter-button" onclick="decrementCounter('counter7')">-</div>
+						<div class="counter-label" id="counter7">Добавлено: 0</div>
+						<div class="counter-button" onclick="incrementCounter('counter7')">+</div>
+					</div>
+				</td>
+			</tr>
+
+			<tr>
+				<td>Печенье</td>
+				<td>90</td>
+				<td>
+					<div class="counter-container">
+						<div class="counter-button" onclick="decrementCounter('counter8')">-</div>
+						<div class="counter-label" id="counter8">Добавлено: 0</div>
+						<div class="counter-button" onclick="incrementCounter('counter8')">+</div>
+					</div>
+				</td>
+			</tr>
+
+			<tr>
+				<td>Пряники</td>
+				<td>110</td>
+				<td>
+					<div class="counter-container">
+						<div class="counter-button" onclick="decrementCounter('counter9')">-</div>
+						<div class="counter-label" id="counter9">Добавлено: 0</div>
+						<div class="counter-button" onclick="incrementCounter('counter9')">+</div>
+					</div>
+				</td>
+			</tr>
+
+			<tr>
+				<td>Макароны БП</td>
+				<td>150</td>
+				<td>
+					<div class="counter-container">
+						<div class="counter-button" onclick="decrementCounter('counter10')">-</div>
+						<div class="counter-label" id="counter10">Добавлено: 0</div>
+						<div class="counter-button" onclick="incrementCounter('counter10')">+</div>
+					</div>
+				</td>
+			</tr>
+
+			<tr>
+				<td>Чипсы</td>
+				<td>160</td>
+				<td>
+					<div class="counter-container">
+						<div class="counter-button" onclick="decrementCounter('counter11')">-</div>
+						<div class="counter-label" id="counter11">Добавлено: 0</div>
+						<div class="counter-button" onclick="incrementCounter('counter11')">+</div>
+					</div>
+				</td>
+			</tr>
+
+			<tr>
+				<td>Сухари</td>
+				<td>100</td>
+				<td>
+					<div class="counter-container">
+						<div class="counter-button" onclick="decrementCounter('counter12')">-</div>
+						<div class="counter-label" id="counter12">Добавлено: 0</div>
+						<div class="counter-button" onclick="incrementCounter('counter12')">+</div>
+					</div>
+				</td>
+			</tr>
+
+			<tr>
+				<td>Кола Черноголовка</td>
+				<td>140</td>
+				<td>
+					<div class="counter-container">
+						<div class="counter-button" onclick="decrementCounter('counter13')">-</div>
+						<div class="counter-label" id="counter13">Добавлено: 0</div>
+						<div class="counter-button" onclick="incrementCounter('counter13')">+</div>
+					</div>
+				</td>
+			</tr>
+
+			<tr>
+				<td>Стаканы</td>
+				<td>500</td>
+				<td>
+					<div class="counter-container">
+						<div class="counter-button" onclick="decrementCounter('counter14')">-</div>
+						<div class="counter-label" id="counter14">Добавлено: 0</div>
+						<div class="counter-button" onclick="incrementCounter('counter14')">+</div>
+					</div>
+				</td>
+			</tr>
+
+			<tr>
+				<td>Магнит</td>
+				<td>100</td>
+				<td>
+					<div class="counter-container">
+						<div class="counter-button" onclick="decrementCounter('counter15')">-</div>
+						<div class="counter-label" id="counter15">Добавлено: 0</div>
+						<div class="counter-button" onclick="incrementCounter('counter15')">+</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>Брелок</td>
+				<td>200</td>
+				<td>
+					<div class="counter-container">
+						<div class="counter-button" onclick="decrementCounter('counter16')">-</div>
+						<div class="counter-label" id="counter16">Добавлено: 0</div>
+						<div class="counter-button" onclick="incrementCounter('counter16')">+</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>Флешка</td>
+				<td>600</td>
+				<td>
+					<div class="counter-container">
+						<div class="counter-button" onclick="decrementCounter('counter17')">-</div>
+						<div class="counter-label" id="counter17">Добавлено: 0</div>
+						<div class="counter-button" onclick="incrementCounter('counter17')">+</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>Колокольчик</td>
+				<td>1000</td>
+				<td>
+					<div class="counter-container">
+						<div class="counter-button" onclick="decrementCounter('counter18')">-</div>
+						<div class="counter-label" id="counter18">Добавлено: 0</div>
+						<div class="counter-button" onclick="incrementCounter('counter18')">+</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>Гигиенический набор</td>
+				<td>100</td>
+				<td>
+					<div class="counter-container">
+						<div class="counter-button" onclick="decrementCounter('counter19')">-</div>
+						<div class="counter-label" id="counter19">Добавлено: 0</div>
+						<div class="counter-button" onclick="incrementCounter('counter19')">+</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>Подушки</td>
+				<td>750</td>
+				<td>
+					<div class="counter-container">
+						<div class="counter-button" onclick="decrementCounter('counter20')">-</div>
+						<div class="counter-label" id="counter20">Добавлено: 0</div>
+						<div class="counter-button" onclick="incrementCounter('counter20')">+</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>Маски</td>
+				<td>500</td>
+				<td>
+					<div class="counter-container">
+						<div class="counter-button" onclick="decrementCounter('counter21')">-</div>
+						<div class="counter-label" id="counter21">Добавлено: 0</div>
+						<div class="counter-button" onclick="incrementCounter('counter21')">+</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>Книжки</td>
+				<td>200</td>
+				<td>
+					<div class="counter-container">
+						<div class="counter-button" onclick="decrementCounter('counter22')">-</div>
+						<div class="counter-label" id="counter22">Добавлено: 0</div>
+						<div class="counter-button" onclick="incrementCounter('counter22')">+</div>
+					</div>
+				</td>
+			</tr>
+
+		</tbody>
+	</table>
+
+	<button onclick="addToCart()">В корзину</button>
+
+    <h3>Корзина</h3>
+    <div id="cart"></div>
+    <div id="additionalInfo" style="display:none;">
+        <div class="input-container" id="inputContainer2">
+            <label for="numvag">Номер вагона:</label>
+            <input type="text" id="numvag" placeholder="Введите номер вагона">
+        </div>
+        <div class="input-container" id="inputContainer3">
+            <label for="numsit">Номер места:</label>
+            <input type="text" id="numsit" placeholder="Введите номер места">
+        </div>
+        <button onclick="submitOrder()">Подтвердить заказ</button>
+    </div>
+
+    <script>
+        const items = [
+				{ name: 'Значки', price: 40, counterId: 'counter1' },
+				{ name: 'Подстаканники', price: 2000, counterId: 'counter2' },
+				{ name: 'Конфеты', price: 80, counterId: 'counter3' },
+				{ name: 'Пастила', price: 75, counterId: 'counter4' },
+				{ name: 'Козинак', price: 38, counterId: 'counter5' },
+				{ name: 'Кофе', price: 91, counterId: 'counter6' },
+				{ name: 'Сахар', price: 10, counterId: 'counter7' },
+				{ name: 'Печенье', price: 90, counterId: 'counter8' },
+				{ name: 'Пряники', price: 110, counterId: 'counter9' },
+				{ name: 'Макароны БП', price: 150, counterId: 'counter10' },
+				{ name: 'Чипсы', price: 160, counterId: 'counter11' },
+				{ name: 'Сухари', price: 100, counterId: 'counter12' },
+				{ name: 'Кола Черноголовка', price: 140, counterId: 'counter13' },
+				{ name: 'Стаканы', price: 500, counterId: 'counter14' },
+				{ name: 'Магнит', price: 100, counterId: 'counter15' },
+				{ name: 'Брелок', price: 200, counterId: 'counter16' },
+				{ name: 'Флешка', price: 600, counterId: 'counter17' },
+				{ name: 'Колокольчик', price: 1000, counterId: 'counter18' },
+				{ name: 'Гигиенический набор', price: 100, counterId: 'counter19' },
+				{ name: 'Подушки', price: 750, counterId: 'counter20' },
+				{ name: 'Маски', price: 500, counterId: 'counter21' },
+				{ name: 'Книжки', price: 200, counterId: 'counter22' }
+			];
+
+        function incrementCounter(id) {
+            const counter = document.getElementById(id);
+            let count = parseInt(counter.textContent.split(': ')[1]);
+            count++;
+            counter.textContent = `Добавлено: ${count}`;
+        }
+
+        function decrementCounter(id) {
+            const counter = document.getElementById(id);
+            let count = parseInt(counter.textContent.split(': ')[1]);
+            if (count > 0) {
+                count--;
+                counter.textContent = `Добавлено: ${count}`;
+            }
+        }
+
+        function addToCart() {
+			// Проверяем, существуют ли контейнеры и отображаем их
+			const inputContainer2 = document.getElementById('inputContainer2');
+			const inputContainer3 = document.getElementById('inputContainer3');
+
+			if (inputContainer2) inputContainer2.style.display = 'block';
+			if (inputContainer3) inputContainer3.style.display = 'block';
+
+			let cartContent = '';
+			
+			// Проверяем каждый товар и добавляем в строку корзины, если он присутствует
+			items.forEach(item => {
+				const countElement = document.getElementById(item.counterId);
+				if (countElement) {
+					const countText = countElement.textContent.split(': ');
+					const count = parseInt(countText[1]);
+
+					if (!isNaN(count) && count > 0) {
+						cartContent += `${item.name} x${count}, `;
+					}
+				} else {
+					console.warn(`Не найден элемент с id ${item.counterId}`);
+				}
+			});
+
+			// Убираем последнюю запятую и пробел, если что-то добавлено
+			if (cartContent.length > 0) {
+				cartContent = cartContent.slice(0, -2);
+			}
+			
+			const cartElement = document.getElementById('cart');
+			if (cartElement) {
+				cartElement.innerHTML = cartContent;
+			} else {
+				console.error("Элемент с id 'cart' не найден.");
+			}
+
+			const additionalInfo = document.getElementById('additionalInfo');
+			if (additionalInfo) {
+				additionalInfo.style.display = 'block';
+			} else {
+				console.error("Элемент с id 'additionalInfo' не найден.");
+			}
+		}
+
+
+
+        function submitOrder() {
+            const numvag = document.getElementById('numvag').value;
+            const numsit = document.getElementById('numsit').value;
+            const cartContent = document.getElementById('cart').innerText;
+
+            fetch('/submit_order', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({numvag, numsit, cartContent })
+            })
+            .then(response => response.text())
+            .then(data => alert(data))
+            .catch(error => alert('Ошибка при отправке заказа: ' + error));
+        }
+    </script>
+</body>
+
+</html>

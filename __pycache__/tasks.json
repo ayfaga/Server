@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "C:/Users/Rayfaga/Desktop/server/.venv/darknet_server/client/darknet_client/src/*.cpp",  // Путь к вашим исходным файлам
+                "-I", "C:/opencv/build/include",  // Путь к включаемым каталогам OpenCV
+                "-L", "C:/opencv/build/x64/vc16/lib",  // Путь к библиотекам OpenCV
+                "-lopencv_world310",  // Подключение OpenCV (убедитесь, что номер версии совпадает)
+                "-o",
+                "${workspaceFolder}/out/main.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Компиляция с использованием G++ и OpenCV"
+        }
+    ]
+}
